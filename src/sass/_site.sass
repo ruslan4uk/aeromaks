@@ -1,0 +1,68 @@
+// All site style
+$blue: #175ba6
+
+
+html, body 
+    font-family: 'Open Sans', sans-serif
+
+// Navigation
+.navigation
+    position: absolute
+    top: 0
+    width: 100%
+    background: transparent
+    padding: 2rem 0
+    & * 
+        color: #ffffff
+    &__list 
+        display: flex
+        margin-left: 2rem
+        align-items: center
+    &__item
+        margin-right: 2rem
+    &__link
+        text-transform: uppercase
+        position: relative
+        &:after
+            content: ' '
+            position: absolute
+            left: 0
+            bottom: -5px
+            width: 0%
+            transition: all ease 0.2s
+            height: 1px
+            background: #ffffff
+        &:hover
+            color: #ffffff
+            text-decoration: none
+            &:after
+                width: 2rem
+    // phone
+    &__phone
+        font-size: 1.25rem
+        & span 
+            font-size: 0.875rem
+
+
+.logo, .logo:hover
+    text-decoration: none
+    background: #ffffff
+    font-weight: 900
+    font-size: 1.5rem
+    color: $blue
+    padding: 0.75rem
+    text-transform: uppercase
+
+
+// Main
+.main
+    min-height: 100vh
+    background-image: url(../img/main-bg.jpg)
+    background-size: cover
+    background-position: center center
+    &__title
+        font-size: 2.75rem
+        font-weight: 900
+        color: #ffffff
+        padding-top: 30vh
+        text-transform: uppercase
