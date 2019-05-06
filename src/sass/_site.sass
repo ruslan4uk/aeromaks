@@ -4,6 +4,27 @@ $blue: #175ba6
 
 html, body 
     font-family: 'Open Sans', sans-serif
+    font-style: 16px
+
+body.overflow
+    @media (max-width: 768px) 
+        height: 100vh
+        overflow: hidden
+
+.title
+    font-weight: 900
+    font-size: 2rem
+    text-transform: uppercase
+    line-height: 1.2
+    &--white
+        color: #ffffff
+
+.subtitle
+    font-size: 1.25rem
+    font-weight: 700
+
+.btn-primary
+    background-color: $blue
 
 // Navigation
 .navigation
@@ -12,6 +33,7 @@ html, body
     width: 100%
     background: transparent
     padding: 2rem 0
+    z-index: 2
     & * 
         color: #ffffff
     &__list 
@@ -43,6 +65,64 @@ html, body
         & span 
             font-size: 0.875rem
 
+// burger
+.burger
+    width: 1.75rem
+    & span 
+        background-color: #fff
+        height: 2px
+        margin: 6px 0
+        display: block
+        width: 100%
+
+
+// m-nav
+.m-nav
+    left: -120%
+    background-color: #fff
+    width: 100%
+    height: 100vh
+    z-index: 2
+    padding: 2rem
+    text-align: center
+    transition: all ease 0.3s
+    &--is-open
+        @media (max-width: 768px) 
+            left: 0
+    &__list
+        margin-bottom: 2rem
+    &__item
+        margin-bottom: 0
+    &__link
+        font-size: 1.125rem
+        font-weight: 500
+        color: $blue
+    &__contact
+        margin-top: 2rem
+        & p 
+            font-size: 1.125rem
+            margin-bottom: 0
+            font-weight: 700
+            & span 
+                font-size: 1rem
+                font-weight: 500
+    &__close
+        position: absolute
+        top: 3rem
+        right: 1.5rem
+        font-size: 1.5rem
+        color: #999999
+    &__logo
+        text-decoration: none
+        box-shadow: 0 0 3px 3px rgba(0,0,0,.05)
+        font-weight: 900
+        font-size: 1.5rem
+        color: $blue
+        padding: 1rem
+        text-transform: uppercase
+        display: inline-block
+        margin-bottom: 2rem
+
 
 .logo, .logo:hover
     text-decoration: none
@@ -50,7 +130,7 @@ html, body
     font-weight: 900
     font-size: 1.5rem
     color: $blue
-    padding: 0.75rem
+    padding: 1rem
     text-transform: uppercase
 
 
@@ -61,8 +141,147 @@ html, body
     background-size: cover
     background-position: center center
     &__title
-        font-size: 2.75rem
+        font-size: 2rem
         font-weight: 900
         color: #ffffff
         padding-top: 30vh
         text-transform: uppercase
+        @media (min-width: 992px)
+            font-size: 2.625rem
+
+
+// About
+.about
+    @media (min-width: 792px)
+        margin-bottom: 5rem
+        margin-top: -15vh
+    &__block 
+        box-shadow: 0 0 10px 6px rgba(0,0,0,.15)
+    &__left
+        background-color: #fff
+        padding: 4rem 3rem
+    &__right
+        background-color: #f2f3f5
+        padding: 4rem 3rem
+    &__title
+        font-size: 1.325rem
+        font-weight: 700
+        color: $blue
+        text-transform: uppercase
+
+    & .icon
+        width: 3rem
+        height: 3rem
+        fill: $blue
+
+
+// services
+.services
+    background-image: url(../img/services-bg.jpg)
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center center
+    background-attachment: fixed
+    padding: 5rem 1rem
+    @media (min-width: 768px)
+        margin-bottom: 7rem
+        padding: 5rem 0
+    &__item
+        padding: 2rem
+        background-color: rgba(0,0,0,.6)
+        transition: all ease 0.2s
+        @media (min-width: 768px)
+            padding: 3rem
+        &:hover
+            background-color: $blue
+            color: #ffffff
+            text-decoration: none
+        border-bottom: 1px solid rgba(255,255,255,.2)
+        border-right: 1px solid rgba(255,255,255,.2)
+        color: #cccccc
+
+    & span
+        width: 100%
+        display: block
+    & .icon
+        width: 3rem
+        height: 3rem
+        fill: #ffffff
+
+
+// advantages
+.advantages
+    background-image: url(../img/advantages-bg.jpg)
+    background-repeat: no-repeat
+    background-size: cover
+    padding: 3rem 0
+    color: #ffffff
+    @media (min-width: 768px)
+        background-position: 50vw
+        color: #000000
+        margin-bottom: 7rem
+    &__title
+        font-weight: 900
+        font-size: 2rem
+        text-transform: uppercase
+        line-height: 1.2
+        
+// portfolio
+.portfolio
+    & img 
+        max-width: 100%
+
+// Order
+.order
+    background-image: url(../img/order-bg.jpg)
+    background-position: center center
+    background-size: cover
+    &__title
+        font-size: 1.75rem
+        font-weight: 700
+        color: #ffffff
+        text-transform: uppercase
+
+
+// Contact
+.contact
+    &__item
+        font-size: 1.125rem
+        font-weight: 700
+    & input[type=text], & textarea
+        background-color: #f2f3f5
+        border-radius: 0
+        transition: all ease 0.2s
+        border: 1px solid #eeeeee
+        font-size: 0.875rem
+        &:focus
+            background-color: #fff
+
+
+.copyright
+    border-top: 5px solid #dddddd
+    background-color: $blue
+    & *
+        color: #ffffff
+
+
+
+// Modal
+.modal
+    &-content
+        border-radius: 0
+        //box-shadow: 0 0 15px 5px rgba(23,91,166, .6)
+    &-header
+        border-radius: 0
+        background-color: $blue
+        color: #ffffff
+        & .close span 
+            color: #ffffff
+    & input[type=text], & textarea
+        background-color: #f2f3f5
+        border-radius: 0
+        transition: all ease 0.2s
+        border: 1px solid #eeeeee
+        font-size: 0.875rem
+        &:focus
+            background-color: #fff

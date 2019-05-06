@@ -53,7 +53,7 @@
     "gulp-util": "^3.0.7",
     "htmlhint": "^0.9.13",
     "husky": "^0.14.3",
-    "jquery": "^3.1.1",
+    "jquery": "^3.3.1",
     "lint-staged": "^7.0.4",
     "lodash": "^4.3.0",
     "lost": "^7.1.0",
@@ -67,6 +67,9 @@
     "webpack-glsl-loader": "^1.0.1"
   },
   "dependencies": {
-    "bootstrap": "^4.3.1"
+    "@fancyapps/fancybox": "^3.5.7",
+    "bootstrap": "^4.3.1",
+    "owl.carousel2": "^2.2.1",
+    "popper.js": "^1.15.0"
   }
 }

@@ -1,10 +1,10 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Pricing example · Bootstrap</title>
-    <link rel="stylesheet" href="css/app.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Аэромакс</title>
+    <link rel="stylesheet" href="css/app.css" />
   </head>
   <body>
     <section class="navigation">
@@ -13,27 +13,62 @@
           <div class="col-12">
             <div class="d-flex align-items-center">
               <a href="/" class="logo">aeromaks</a>
-              <div class="navigation__list">
+              <div class="navigation__list d-none d-lg-flex">
                 <div class="navigation__item">
-                  <a href="/" class="navigation__link">О компании</a>
+                  <a href="#about" class="navigation__link scroll">О компании</a>
                 </div>
                 <div class="navigation__item">
-                  <a href="/" class="navigation__link">Услуги</a>
+                  <a href="#services" class="navigation__link scroll">Услуги</a>
                 </div>
                 <div class="navigation__item">
-                  <a href="/" class="navigation__link">Факты</a>
+                  <a href="#advantages" class="navigation__link scroll">Факты</a>
                 </div>
                 <div class="navigation__item">
-                  <a href="/" class="navigation__link">Контакты</a>
+                  <a href="#contact" class="navigation__link scroll">Контакты</a>
                 </div>
               </div>
-              <div class="navigation__right ml-auto">
+              <div class="burger ml-auto d-md-none">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <div class="navigation__right ml-auto d-none d-md-block">
                 <div class="navigation__phone mb-2"><span>+7 (3412) </span>98-76-54</div>
-                <a href="" class="btn btn-md btn-outline-light">Заказать звонок</a>
+                <a href="" class="btn btn-md btn-outline-light" data-toggle="modal" data-target="#order" data-whatever="Заказ звонка">Заказать звонок</a>
               </div>
             </div>
           </div>
         </div>
+      </div>
+    </section>
+    <section class="m-nav position-absolute">
+      <a href="" class="m-nav__close">
+        <i class="fas fa-times"></i>
+      </a>
+      <div class="m-nav__logo">aeromaks</div>
+      <div class="m-nav__list">
+        <div class="m-nav__item">
+          <a href="#about" class="m-nav__link scroll">О компании</a>
+        </div>
+        <div class="m-nav__item">
+          <a href="#services" class="m-nav__link scroll">Услуги</a>
+        </div>
+        <div class="m-nav__item">
+          <a href="#advantages" class="m-nav__link scroll">Факты</a>
+        </div>
+        <div class="m-nav__item">
+          <a href="#contact" class="m-nav__link scroll">Контакты</a>
+        </div>
+      </div>
+      <hr />
+      <!-- m-nav contact -->
+      <div class="m-nav__contact">
+        <p><span>Телефон</span></p>
+        <p>+7 (3412) 98-76-54</p>
+        <p><span>Email</span></p>
+        <p>aeromaks@ mail.ru</p>
+        <p><span>Адрес</span></p>
+        <p>г.Ижевск, ул.Маяковского, 35</p>
       </div>
     </section>
     <section class="main">
@@ -41,11 +76,297 @@
         <div class="row">
           <div class="col-12">
             <div class="main__title mb-5"> Установка и обслуживание <br /> систем вентиляции <br /> под ключ </div>
-            <a href="" class="btn btn-lg btn-outline-light">Наша продукция</a>
+            <a href="" class="btn btn-lg btn-outline-light" data-toggle="modal" data-target="#order" data-whatever="Наша продукция">Наша продукция</a>
           </div>
         </div>
       </div>
     </section>
+    <section class="about" id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="about__block">
+              <div class="row">
+                <div class="col-12 col-lg-6 about__left">
+                  <div class="about__title mb-3">О компании</div>
+                  <div class="about__text">
+                    <p> AEROMAKS — лидер в области промышленной вентиляции на территории России. С момента основания каждый год оборот компании стабильно увеличивается в два раза, пропорционально растет численность сотрудников. Сегодня штат AEROMAKS насчитывает более 500 профессионалов. Компания осуществляет свою деятельность на территории России. </p>
+                  </div>
+                </div>
+                <div class="col-12 col-lg-6 d-flex align-items-center about__right">
+                  <div class="row">
+                    <div class="col-12 col-sm-6 mt-2 text-center">
+                      <svg class="icon mb-2">
+                        <use xlink:href="img/sprite.svg#icon-engineer" />
+                      </svg>
+                      <p>Квалифицированный персонал</p>
+                    </div>
+                    <div class="col-12 col-sm-6 mt-2 text-center">
+                      <svg class="icon mb-2">
+                        <use xlink:href="img/sprite.svg#icon-collaboration" />
+                      </svg>
+                      <p>Работа на результат</p>
+                    </div>
+                    <div class="col-12 col-sm-6 mt-2 text-center">
+                      <svg class="icon mb-2">
+                        <use xlink:href="img/sprite.svg#icon-shield" />
+                      </svg>
+                      <p>Гарантия качества</p>
+                    </div>
+                    <div class="col-12 col-sm-6 mt-2 text-center">
+                      <svg class="icon mb-2">
+                        <use xlink:href="img/sprite.svg#icon-love" />
+                      </svg>
+                      <p>Система лояльности</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="services" id="services">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="title title--white text-center mb-5">Мы предлагаем</div>
+          </div>
+          <a href="" class="col-12 col-md-6 col-lg-4 services__item" data-toggle="modal" data-target="#order" data-whatever="Вентиляция промышленных помещений и складов">
+            <svg class="icon mb-2">
+              <use xlink:href="img/sprite.svg#icon-air-conditioner" />
+            </svg>
+            <span>Вентиляция промышленных помещений и складов</span>
+          </a>
+          <a href="" class="col-12 col-md-6 col-lg-4 services__item" data-toggle="modal" data-target="#order" data-whatever="Вентиляция коттеджей, саун, бассейнов">
+            <svg class="icon mb-2">
+              <use xlink:href="img/sprite.svg#icon-conditioner" />
+            </svg>
+            <span>Вентиляция коттеджей, саун, бассейнов, бытовых объектов</span>
+          </a>
+          <a href="" class="col-12 col-md-6 col-lg-4 services__item" data-toggle="modal" data-target="#order" data-whatever="Системы кондиционирования помещений">
+            <svg class="icon mb-2">
+              <use xlink:href="img/sprite.svg#icon-fan" />
+            </svg>
+            <span>Системы кондиционирования помещений</span>
+          </a>
+          <a href="" class="col-12 col-md-6 col-lg-4 services__item" data-toggle="modal" data-target="#order" data-whatever="Монтаж и пуско-наладочные работы">
+            <svg class="icon mb-2">
+              <use xlink:href="img/sprite.svg#icon-start" />
+            </svg>
+            <span>Монтаж и пуско-наладочные работы</span>
+          </a>
+          <a href="" class="col-12 col-md-6 col-lg-4 services__item" data-toggle="modal" data-target="#order" data-whatever="Проектированиесистем вентиляции">
+            <svg class="icon mb-2">
+              <use xlink:href="img/sprite.svg#icon-project" />
+            </svg>
+            <span>Проектированиесистем вентиляции</span>
+          </a>
+          <a href="" class="col-12 col-md-6 col-lg-4 services__item" data-toggle="modal" data-target="#order" data-whatever="Гарантийное обслуживание систем вентиляции">
+            <svg class="icon mb-2">
+              <use xlink:href="img/sprite.svg#icon-service" />
+            </svg>
+            <span>Гарантийное обслуживание систем вентиляции</span>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- Advantages -->
+    <section class="advantages" id="advantages">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <div class="row">
+              <div class="col-md-12 col-lg-6 pt-4 pb-4">
+                <div class="advantages__title mb-4">Наша цель</div>
+                <div class="advantages__description">Решение ваших задач</div>
+              </div>
+              <div class="col-md-12 col-lg-6 pt-4 pb-4">
+                <div class="advantages__title mb-4">Опыт</div>
+                <div class="advantages__description">Большой опыт работы в сфере вентиляции</div>
+              </div>
+              <div class="col-md-12 col-lg-6 pt-4 pb-4">
+                <div class="advantages__title mb-4">Движение вперед</div>
+                <div class="advantages__description">Мы никогда не стоим на месте</div>
+              </div>
+              <div class="col-md-12 col-lg-6 pt-4 pb-4">
+                <div class="advantages__title mb-4">Гарантия для вас</div>
+                <div class="advantages__description">Мы гарантируем лучшее</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="portfolio pb-5 pt-5 pt-md-0">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <div class="title mb-5">Наши работы</div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3 mb-4">
+            <a href="img/portfolio/1.jpg" data-fancybox="images">
+              <img src="img/portfolio/1_small.jpg" alt="">
+            </a>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3 mb-4">
+            <a href="img/portfolio/2.jpg" data-fancybox="images">
+              <img src="img/portfolio/2_small.jpg" alt="">
+            </a>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3 mb-4">
+            <a href="img/portfolio/3.jpg" data-fancybox="images">
+              <img src="img/portfolio/3_small.jpg" alt="">
+            </a>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3 mb-4">
+            <a href="img/portfolio/4.jpeg" data-fancybox="images">
+              <img src="img/portfolio/4_small.jpg" alt="">
+            </a>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3 mb-4">
+            <a href="img/portfolio/5.jpg" data-fancybox="images">
+              <img src="img/portfolio/5_small.jpg" alt="">
+            </a>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3 mb-4">
+            <a href="img/portfolio/6.jpg" data-fancybox="images">
+              <img src="img/portfolio/6_small.jpg" alt="">
+            </a>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3 mb-4">
+            <a href="img/portfolio/7.jpg" data-fancybox="images">
+              <img src="img/portfolio/7_small.jpg" alt="">
+            </a>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3 mb-4">
+            <a href="img/portfolio/8.jpg" data-fancybox="images">
+              <img src="img/portfolio/8_small.jpg" alt="">
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Order -->
+    <section class="order pt-5 pb-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <div class="order__title mb-4">оставьте заявку на бесплатную консультацию</div>
+            <a href="" class="btn btn-lg btn-outline-light" data-toggle="modal" data-target="#order" data-whatever="консультация">ОСТАВИТЬ ЗАЯВКУ</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Map -->
+    <section class="map">
+      <div style="overflow:hidden;width: 100%;position: relative;"><iframe width="100%" height="440" src="https://maps.google.com/maps?width=100&amp;height=440&amp;hl=ru&amp;q=%D0%B8%D0%B6%D0%B5%D0%B2%D1%81%D0%BA%2C%20%D0%BC%D0%B0%D1%8F%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B3%D0%BE%2035+(%D0%9D%D0%B0%D0%B7%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5)&amp;ie=UTF8&amp;t=&amp;z=15&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+        <div style="position: absolute;width: 80%;bottom: 10px;left: 0;right: 0;margin-left: auto;margin-right: auto;color: #000;text-align: center;"><small style="line-height: 1.8;font-size: 2px;background: #fff;">Powered by <a href="https://embedgooglemaps.com/it/">embedgooglemaps IT</a> & <a href="https://iamsterdamcard.it">i amsterdamcard it</a></small></div>
+        <style>
+          #gmap_canvas img {
+            max-width: none !important;
+            background: none !important
+          }
+
+        </style>
+      </div><br />
+    </section>
+    <!-- Contact -->
+    <section class="contact pt-5 pb-5" id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-6 mb-5 mb-md-0">
+            <div class="title mb-4">Позвоните нам</div>
+            <div class="contact__item mb-3">Телефон: +7 (3412) 123 - 456</div>
+            <div class="contact__item mb-5">Горячая линия: +7 (3412) 123 - 456</div>
+            <div class="contact__item mb-3">Адрес: <span>г.Ижевск, ул. Маяковского, 35</span></div>
+            <div class="contact__item mb-3">Email: <span>aeromaks@aeromaks.ru</span></div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="title mb-4">Или напишите</div>
+            <form action="/form.php" method="POST" class="row form-submit">
+              <input type="hidden" name="hidden" value="Форма внизу страницы">
+              <div class="form-group col-12">
+                <input type="text" name="subject" id="subject" placeholder="Тема сообщения" class="form-control">
+              </div>
+              <div class="col-12">
+                <div class="row">
+                  <div class="form-group col-12 col-md-6">
+                    <input type="text" name="name" id="name" placeholder="Ваше имя" class="form-control" required>
+                  </div>
+                  <div class="form-group col-12 col-md-6">
+                    <input type="text" name="email" id="mail" placeholder="Ваш Email или теелфон" class="form-control" required>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-group">
+                  <textarea name="message" id="" rows="7" class="form-control" placeholder="Сообщение"></textarea>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="alert alert-success d-none">Сообщение успешно отправлено</div>
+                <div class="alert alert-danger d-none">Ошибка!</div>
+              </div>
+              <div class="col-12">
+                <div class="form-group text-right">
+                  <button type="submit" value="" class="btn btn-md btn-outline-primary">Отправить</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="copyright pt-4 pb-2">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <p>2019г. ООО "Аэромакс"</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Modal -->
+    <div class="modal fade" id="order" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalCenterTitle">Запрос</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="subtitle mb-4 mt-2 text-center">Оставьте заявку и мы сделаем для Вас специальное предложение</div>
+            <form action="/form.php" method="POST" class="form-submit">
+              <input type="hidden" name="hidden">
+              <div class="form-group">
+                <input type="text" name="subject" id="" class="form-control" placeholder="Тема сообщения">
+              </div>
+              <div class="row">
+                <div class="form-group col-6">
+                  <input type="text" name="name" id="" class="form-control" placeholder="Ваше имя" required>
+                </div>
+                <div class="form-group col-6">
+                  <input type="text" name="email" id="" class="form-control" placeholder="Ваш Email или телефон" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <textarea name="message" id="" rows="6" class="form-control" placeholder="Сообщение"></textarea>
+              </div>
+              <div class="alert alert-success d-none">Сообщение успешно отправлено</div>
+              <div class="alert alert-danger d-none">Ошибка!</div>
+              <div class="d-block text-center pb-4 pt-3">
+                <button type="submit" class="btn btn-md btn-primary">Отправить</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/all.js" integrity="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ" crossorigin="anonymous"></script>
     <script src="js/app.js"></script>
   </body>
 </html>
